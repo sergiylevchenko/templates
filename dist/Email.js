@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const jsx_runtime_1 = require("react/jsx-runtime");
-// import Title from './elements/Title';
+const Title_1 = require("./elements/Title");
 const style = {
     container: {
         backgroundColor: '#efefef',
@@ -15,6 +15,6 @@ const style = {
 };
 const Email = ({ data }) => {
     console.log('render Email');
-    return ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: "TEST" }, void 0));
+    return ((0, jsx_runtime_1.jsx)("div", { children: (0, jsx_runtime_1.jsx)(Title_1.default, { children: " Test title " }, void 0) }, void 0));
 };
 exports.default = Email;

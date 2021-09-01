@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-// import Title from './elements/Title';
+import Title from './elements/Title';
 
 const style = {
 
@@ -21,7 +21,9 @@ const Email = ({ data }) => {
   console.log( 'render Email' );
 
   return (
-    <>TEST</>
+    <div>
+        <Title> Test title </Title>
+    </div>
   );
 };
 
