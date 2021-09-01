@@ -17,7 +17,7 @@ const style = {
 
 };
 
-function Email({ data }) {
+const Email = ({ data }) => {
   return (
     <div>
       TEST

@@ -10,7 +10,9 @@ export function sayGoodbye() {
   console.log('goodbye')
 }
 
-export function generateEmailTpl() {
+export function generateEmailTpl(type, params) {
+  console.log(type);
+  console.log(params);
   const emailElement = React.createElement(Email, { data: {city: 'Email'} });
   console.log(emailElement)
   console.log('------------')

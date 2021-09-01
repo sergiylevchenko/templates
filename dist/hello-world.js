@@ -12,7 +12,9 @@ function sayGoodbye() {
     console.log('goodbye');
 }
 exports.sayGoodbye = sayGoodbye;
-function generateEmailTpl() {
+function generateEmailTpl(type, params) {
+    console.log(type);
+    console.log(params);
     const emailElement = React.createElement(Email_1.default, { data: { city: 'Email' } });
     console.log(emailElement);
     console.log('------------');

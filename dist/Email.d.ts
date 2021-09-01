@@ -1,4 +1,4 @@
-declare function Email({ data }: {
+declare const Email: ({ data }: {
     data: any;
-}): import("preact").JSX.Element;
+}) => import("preact").JSX.Element;
 export default Email;

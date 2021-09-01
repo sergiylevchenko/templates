@@ -13,7 +13,7 @@ const style = {
         width: '100%',
     },
 };
-function Email({ data }) {
+const Email = ({ data }) => {
     return ((0, jsx_runtime_1.jsx)("div", { children: "TEST" }, void 0));
-}
+};
 exports.default = Email;
