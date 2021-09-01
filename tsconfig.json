@@ -5,6 +5,7 @@
     "declaration": true,
     "outDir": "./dist",
     "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
     "jsx": "preserve"
   },
   "include": ["src/**/*"],
