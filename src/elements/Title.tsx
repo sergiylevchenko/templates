@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import Grid from '../layout/Grid';
-
 const style = {
 
   wrapper: {
@@ -20,11 +18,9 @@ const style = {
 
 function Title({ children }) {
   return (
-    <Grid style={style.wrapper}>
       <h1 style={style.title} className="title-heading">
         {children}
       </h1>
-    </Grid>
   );
 }
 

@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import Grid from './layout/Grid';
 import Title from './elements/Title';
 
 const style = {
@@ -20,10 +19,8 @@ const style = {
 
 function Email({ data }) {
   return (
-    <div style={style.container}>
-      <Grid style={style.main}>
-        <Title>Weather report for {data.city}</Title>
-      </Grid>
+    <div>
+      <Title>Weather report for {data.city}</Title>
     </div>
   );
 }
