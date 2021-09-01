@@ -18,10 +18,9 @@ const style = {
 };
 
 const Email = ({ data }) => {
+  console.log( 'EMAIL' )
   return (
-    <div>
-      TEST
-    </div>
+    <>TEST</>
   );
 }
 

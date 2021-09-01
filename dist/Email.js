@@ -14,6 +14,7 @@ const style = {
     },
 };
 const Email = ({ data }) => {
-    return ((0, jsx_runtime_1.jsx)("div", { children: "TEST" }, void 0));
+    console.log('EMAIL');
+    return ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: "TEST" }, void 0));
 };
 exports.default = Email;
