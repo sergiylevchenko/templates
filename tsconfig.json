@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "lib": ["es5", "es6", "es7", "dom"],
+    "target": "es2018",
     "module": "commonjs",
-    "target": "esnext",
     "declaration": true,
     "outDir": "./dist",
     "allowSyntheticDefaultImports": true,
-    "jsx": "react-jsx",
-    "baseUrl": "./src"
+    "jsx": "react-jsx"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
