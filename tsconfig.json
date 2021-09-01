@@ -5,8 +5,7 @@
     "declaration": true,
     "outDir": "./dist",
     "allowSyntheticDefaultImports": true,
-    "jsx": "preserve",
-    "lib": ["es5", "es6", "es7", "dom"]
+    "jsx": "preserve"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
