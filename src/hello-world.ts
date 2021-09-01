@@ -12,6 +12,8 @@ export function sayGoodbye() {
 
 export function generateEmailTpl() {
   const emailElement = React.createElement(Email, { data: {city: 'Email'} });
+  console.log(emailElement)
+  console.log('------------')
   const content = ReactDOMServer.renderToStaticMarkup(emailElement);
 
   return content;
