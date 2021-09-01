@@ -3,16 +3,15 @@ import * as React from 'react';
 const tableStyle = {
   table: {
     width: '100%',
-    // borderCollapse: 'collapse',
   },
 };
 
 
-function Cell({children, style = {}, className}) {
+const Cell = ({children, style = {}, className}) => {
   return <td style={style} className={className}>{children}</td>;
-}
+};
 
-function Row({children, style = {}}) {
+const Row = ({children, style = {}}) => {
   return (
     <tr style={style}>
       {React.Children.map(children, (el) => {
@@ -21,9 +20,9 @@ function Row({children, style = {}}) {
       })}
     </tr>
   );
-}
+};
 
-function Grid({children, style = {}}) {
+const Grid = ({children, style = {}}) => {
   return (
     <table style={{...tableStyle.table, ...style}}>
       <tbody>
@@ -48,7 +47,7 @@ function Grid({children, style = {}}) {
       </tbody>
     </table>
   );
-}
+};
 
 Grid.Row = Row;
 Grid.Cell = Cell;
