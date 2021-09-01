@@ -1,4 +1,5 @@
 import * as React from 'react';
+import tw from 'tailwind-styled-components';
 
 import Grid from './Grid';
 
@@ -17,10 +18,14 @@ const style = {
 
 const Title = ({children}) => (
   <Grid style={style.wrapper}>
-    <h1 style={style.title} className="title-heading">
-      {children}
-    </h1>
+    <PageHeader>{children}</PageHeader>
   </Grid>
 );
+
+const PageHeader = tw.h1`
+  text-2xl
+  font-extrabold
+  mb-4
+`;
 
 export default Title;
