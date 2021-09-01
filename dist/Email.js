@@ -14,7 +14,7 @@ const style = {
     },
 };
 const Email = ({ data }) => {
-    console.log('render Email');
-    return ((0, jsx_runtime_1.jsx)("div", { children: (0, jsx_runtime_1.jsx)(Title_1.default, { children: " Test title " }, void 0) }, void 0));
+    console.log(data);
+    return ((0, jsx_runtime_1.jsx)("div", { children: (0, jsx_runtime_1.jsxs)(Title_1.default, { children: ["Test title ", data.title] }, void 0) }, void 0));
 };
 exports.default = Email;

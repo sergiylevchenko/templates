@@ -9,10 +9,10 @@ export function sayHello() {
 export function sayGoodbye() {
   console.log('goodbye')
 }
-export function generateEmailTpl(type, params) {
+export function generateEmailTpl(type, props) {
   console.log(type);
-  console.log(params);
-  const emailElement = React.createElement(Email, { data: {city: 'Email'} });
+  console.log(props);
+  const emailElement = React.createElement(Email, props);
   console.log(emailElement)
   console.log('------------')
   const content = ReactDOMServer.renderToStaticMarkup(emailElement);

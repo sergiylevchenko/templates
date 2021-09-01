@@ -12,10 +12,10 @@ function sayGoodbye() {
     console.log('goodbye');
 }
 exports.sayGoodbye = sayGoodbye;
-function generateEmailTpl(type, params) {
+function generateEmailTpl(type, props) {
     console.log(type);
-    console.log(params);
-    const emailElement = React.createElement(Email_1.default, { data: { city: 'Email' } });
+    console.log(props);
+    const emailElement = React.createElement(Email_1.default, props);
     console.log(emailElement);
     console.log('------------');
     const content = ReactDOMServer.renderToStaticMarkup(emailElement);

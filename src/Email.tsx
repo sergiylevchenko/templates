@@ -18,11 +18,11 @@ const style = {
 };
 
 const Email = ({ data }) => {
-  console.log( 'render Email' );
+  console.log( data );
 
   return (
     <div>
-        <Title> Test title </Title>
+        <Title>Test title {data.title}</Title>
     </div>
   );
 };
