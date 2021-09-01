@@ -6,12 +6,10 @@ const baseStyle = {
   },
 };
 
-function Base({children, style = {}}) {
-  return (
-    <html>
-      <body style={{...baseStyle.body, ...style}}>{children}</body>
-    </html>
-  )
-}
+const Base = ({children, style = {}}) => (
+  <html>
+    <body style={{...baseStyle.body, ...style}}>{children}</body>
+  </html>
+);
 
 export default Base;
