@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
-import ConsumerAccountConfirmation from './templates/ConsumerAccountConfirmation';
+
+import ConsumerAccountConfirmation from './ConsumerAccountConfirmation';
 
 export function generateEmailTpl(type, props) {
   const emailElement = React.createElement(ConsumerAccountConfirmation, props);
