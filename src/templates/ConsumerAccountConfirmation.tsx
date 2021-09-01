@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import Base from '../layout/Base';
-import Title from '../components/Title';
+import Title from '../elements/Title';
 
 const ConsumerAccountConfirmation = ({data}) => {
   return (
