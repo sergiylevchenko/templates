@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const jsx_runtime_1 = require("preact/jsx-runtime");
-const react_1 = require("react");
+const React = require("react");
 /**
  * This grid allows you to be less verbose by only defining whay you need:
  *
@@ -53,14 +53,14 @@ function Cell({ children, style = {}, className }) {
     return (0, jsx_runtime_1.jsx)("td", Object.assign({ style: style, className: className }, { children: children }), void 0);
 }
 function Row({ children, style = {} }) {
-    return ((0, jsx_runtime_1.jsx)("tr", Object.assign({ style: style }, { children: react_1.default.Children.map(children, (el) => {
+    return ((0, jsx_runtime_1.jsx)("tr", Object.assign({ style: style }, { children: React.Children.map(children, (el) => {
             if (el.type === Cell)
                 return el;
             return (0, jsx_runtime_1.jsx)("td", { children: el }, void 0);
         }) }), void 0));
 }
 function Grid({ children, style = {} }) {
-    return ((0, jsx_runtime_1.jsx)("table", Object.assign({ style: Object.assign(Object.assign({}, tableStyle.table), style) }, { children: (0, jsx_runtime_1.jsx)("tbody", { children: react_1.default.Children.map(children, (el) => {
+    return ((0, jsx_runtime_1.jsx)("table", Object.assign({ style: Object.assign(Object.assign({}, tableStyle.table), style) }, { children: (0, jsx_runtime_1.jsx)("tbody", { children: React.Children.map(children, (el) => {
                 if (!el)
                     return;
                 // We want this content the be on it's own row.

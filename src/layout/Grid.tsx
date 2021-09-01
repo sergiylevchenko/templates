@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 /**
  * This grid allows you to be less verbose by only defining whay you need:
