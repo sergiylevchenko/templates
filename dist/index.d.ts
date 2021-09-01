@@ -1,1 +1,1 @@
-export { sayHello, sayGoodbye } from './hello-world';
+export { sayHello, sayGoodbye, generateEmailTpl } from './hello-world';

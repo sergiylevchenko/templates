@@ -11,7 +11,7 @@ const style = {
 
   title: {
     fontSize: '24px',
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     marginTop: '5px',
     marginBottom: '10px',
   },

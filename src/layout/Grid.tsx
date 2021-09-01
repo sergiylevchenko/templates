@@ -46,7 +46,7 @@ const tableStyle = {
 
   table: {
     width: '100%',
-    borderCollapse: 'collapse',
+    // borderCollapse: 'collapse',
   },
 
 };

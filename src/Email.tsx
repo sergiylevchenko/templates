@@ -20,11 +20,11 @@ const style = {
 
 function Email({ data }) {
   return (
-    <center style={style.container}>
+    <div style={style.container}>
       <Grid style={style.main}>
         <Title>Weather report for {data.city}</Title>
       </Grid>
-    </center>
+    </div>
   );
 }
 
