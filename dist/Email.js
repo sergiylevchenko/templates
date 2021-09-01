@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const jsx_runtime_1 = require("preact/jsx-runtime");
+const jsx_runtime_1 = require("react/jsx-runtime");
 // import Title from './elements/Title';
 const style = {
     container: {
@@ -13,5 +13,8 @@ const style = {
         width: '100%',
     },
 };
-const Email = ({ data }) => ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: "TEST" }, void 0));
+const Email = ({ data }) => {
+    console.log('render Email');
+    return ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: "TEST" }, void 0));
+};
 exports.default = Email;

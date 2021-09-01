@@ -1,4 +1,5 @@
+/// <reference types="react" />
 declare function Title({ children }: {
     children: any;
-}): import("preact").JSX.Element;
+}): JSX.Element;
 export default Title;

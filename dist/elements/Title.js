@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const jsx_runtime_1 = require("preact/jsx-runtime");
+const jsx_runtime_1 = require("react/jsx-runtime");
 const style = {
     wrapper: {
         width: 'auto',
