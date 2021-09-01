@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Title from './elements/Title';
+// import Title from './elements/Title';
 
 const style = {
 
@@ -20,7 +20,7 @@ const style = {
 function Email({ data }) {
   return (
     <div>
-      <Title>Weather report for {data.city}</Title>
+      TEST
     </div>
   );
 }

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const jsx_runtime_1 = require("preact/jsx-runtime");
-const Title_1 = require("./elements/Title");
+// import Title from './elements/Title';
 const style = {
     container: {
         backgroundColor: '#efefef',
@@ -14,6 +14,6 @@ const style = {
     },
 };
 function Email({ data }) {
-    return ((0, jsx_runtime_1.jsx)("div", { children: (0, jsx_runtime_1.jsxs)(Title_1.default, { children: ["Weather report for ", data.city] }, void 0) }, void 0));
+    return ((0, jsx_runtime_1.jsx)("div", { children: "TEST" }, void 0));
 }
 exports.default = Email;
