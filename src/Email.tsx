@@ -22,7 +22,7 @@ const Email = ({data}) => {
 
   return (
     <div>
-      <Title>Test title {data.title}</Title>
+      <Title>Test title {data.title} 1</Title>
     </div>
   );
 };
