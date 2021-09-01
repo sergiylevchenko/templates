@@ -8,11 +8,11 @@ const tableStyle = {
 };
 
 
-function Cell({ children, style = {}, className }) {
+function Cell({children, style = {}, className}) {
   return <td style={style} className={className}>{children}</td>;
 }
 
-function Row({ children, style = {} }) {
+function Row({children, style = {}}) {
   return (
     <tr style={style}>
       {React.Children.map(children, (el) => {
@@ -23,9 +23,9 @@ function Row({ children, style = {} }) {
   );
 }
 
-function Grid({ children, style = {} }) {
+function Grid({children, style = {}}) {
   return (
-    <table style={{ ...tableStyle.table, ...style }}>
+    <table style={{...tableStyle.table, ...style}}>
       <tbody>
       {React.Children.map(children, (el) => {
         if (!el) return;

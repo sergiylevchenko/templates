@@ -17,12 +17,12 @@ const style = {
 
 };
 
-const Email = ({ data }) => {
-  console.log( data );
+const Email = ({data}) => {
+  console.log(data);
 
   return (
     <div>
-        <Title>Test title {data.title}</Title>
+      <Title>Test title {data.title}</Title>
     </div>
   );
 };
