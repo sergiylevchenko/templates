@@ -16,7 +16,8 @@ export function generateEmailTpl(type, params) {
   const emailElement = React.createElement(Email, { data: {city: 'Email'} });
   console.log(emailElement)
   console.log('------------')
-  const content = ReactDOMServer.renderToStaticMarkup(emailElement);
+  // const content = ReactDOMServer.renderToStaticMarkup(emailElement);
+  const content = ReactDOMServer.renderToString(emailElement);
 
   return content;
 }
