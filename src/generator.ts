@@ -1,9 +1,9 @@
 import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
-import Email from './Email';
+import ConsumerAccountConfirmation from './templates/ConsumerAccountConfirmation';
 
 export function generateEmailTpl(type, props) {
-  const emailElement = React.createElement(Email, props);
+  const emailElement = React.createElement(ConsumerAccountConfirmation, props);
   const content = ReactDOMServer.renderToStaticMarkup(emailElement);
 
   return content;
