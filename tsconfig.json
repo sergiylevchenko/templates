@@ -5,9 +5,7 @@
     "declaration": true,
     "outDir": "./dist",
     "allowSyntheticDefaultImports": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact",
-    "types": ["preact"]
+    "jsx": "react-jsx"
   },
   "include": [
     "src/**/*"
