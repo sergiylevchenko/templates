@@ -9,15 +9,13 @@ export function sayHello() {
 export function sayGoodbye() {
   console.log('goodbye')
 }
-
 export function generateEmailTpl(type, params) {
   console.log(type);
   console.log(params);
   const emailElement = React.createElement(Email, { data: {city: 'Email'} });
   console.log(emailElement)
   console.log('------------')
-  // const content = ReactDOMServer.renderToStaticMarkup(emailElement);
-  const content = ReactDOMServer.renderToString(emailElement);
+  const content = ReactDOMServer.renderToStaticMarkup(emailElement);
 
   return content;
 }

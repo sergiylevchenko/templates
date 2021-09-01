@@ -13,8 +13,5 @@ const style = {
         width: '100%',
     },
 };
-const Email = ({ data }) => {
-    console.log('EMAIL');
-    return ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: "TEST" }, void 0));
-};
+const Email = ({ data }) => ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: "TEST" }, void 0));
 exports.default = Email;

@@ -17,11 +17,8 @@ const style = {
 
 };
 
-const Email = ({ data }) => {
-  console.log( 'EMAIL' )
-  return (
-    <>TEST</>
-  );
-}
+const Email = ({ data }) => (
+  <>TEST</>
+);
 
 export default Email;
