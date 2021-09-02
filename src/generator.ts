@@ -76,6 +76,8 @@ const getTemplate = (type: EmailType): ITemplateParams => {
 };
 
 const getFile = (relativePath): Promise<string> => {
+  console.log(__dirname)
+  console.log(path)
   return new Promise((resolve, reject) => {
     const filePath = path.join(__dirname, relativePath);
 
