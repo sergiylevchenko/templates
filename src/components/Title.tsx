@@ -1,6 +1,8 @@
 import * as React from 'react';
 import tw from 'tailwind-styled-components';
 
+import {IComponentsProps} from '../common/interfaces';
+
 import Grid from './Grid';
 
 const style = {
@@ -16,7 +18,7 @@ const style = {
   },
 };
 
-const Title = ({children}) => (
+const Title = ({children}: IComponentsProps) => (
   <Grid style={style.wrapper}>
     <PageHeader>{children}</PageHeader>
   </Grid>

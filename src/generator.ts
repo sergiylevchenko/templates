@@ -1,6 +1,13 @@
 import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
+import './styles/index.css';
+
 import ConsumerAccountConfirmation from './templates/ConsumerAccountConfirmation';
+
+interface ITemplateParams {
+  subject: EmailSubject | null,
+  tpl: React.FunctionComponent | null
+}
 
 export enum EmailType {
   ConsumerAccountConfirmation = 'consumer-account-confirmation',
@@ -25,8 +32,8 @@ enum EmailSubject {
   NewOrderNotification = 'New Order Notification'
 }
 
-const getTemplate = (type: EmailType) => {
-  const templateParams = {
+const getTemplate = (type: EmailType): ITemplateParams => {
+  const templateParams: ITemplateParams = {
     subject: null,
     tpl: null
   };
@@ -65,7 +72,7 @@ const getTemplate = (type: EmailType) => {
   return templateParams;
 };
 
-export function generateEmailTpl(type, props): string | boolean {
+export function generateEmailTpl(type: EmailType, props: any): string | boolean {
   const {tpl, subject} = getTemplate(type);
 
   if (!tpl || !subject) {
