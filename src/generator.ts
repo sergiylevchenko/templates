@@ -1,8 +1,11 @@
+import fs from 'fs';
+import path from 'path';
 import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
-// import './styles/index.css';
 
 import ConsumerAccountConfirmation from './templates/ConsumerAccountConfirmation';
+
+const CONTENT_TAG = '%CONTENT%';
 
 interface ITemplateParams {
   subject: EmailSubject | null,
@@ -72,15 +75,33 @@ const getTemplate = (type: EmailType): ITemplateParams => {
   return templateParams;
 };
 
-export function generateEmailTpl(type: EmailType, props: any): string | boolean {
+const getFile = (relativePath): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const filePath = path.join(__dirname, relativePath);
+
+    return fs.readFile(filePath, { encoding: 'utf8' }, (err, file) => {
+      if (err) return reject(err);
+      return resolve(file);
+    })
+  });
+};
+
+export const generateEmailTpl = async (type: EmailType, props: any): Promise<string | boolean> => {
   const {tpl, subject} = getTemplate(type);
 
   if (!tpl || !subject) {
-    return false
+    return Promise.resolve(false);
   }
 
-  const emailElement = React.createElement(tpl, {...props, subject});
-  const content = ReactDOMServer.renderToStaticMarkup(emailElement);
+  return getFile('./email.html')
+    .then((template) => {
+      const emailElement = React.createElement(tpl, {...props, subject});
+      const content = ReactDOMServer.renderToStaticMarkup(emailElement);
 
-  return content;
-}
+      // Replace the template tags with the content
+      let emailHTML = template;
+      emailHTML = emailHTML.replace(CONTENT_TAG, content);
+
+      return emailHTML;
+    });
+};
