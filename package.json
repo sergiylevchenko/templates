@@ -8,7 +8,8 @@
     "/dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "copy": "shx cp src/email.html dist/email.html",
+    "build": "tsc && npm run copy",
     "prepare": "npm run build"
   },
   "devDependencies": {
@@ -21,6 +22,7 @@
     "autoprefixer": "9.8.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "shx": "^0.3.3",
     "tailwind-styled-components": "^2.0.3"
   }
 }
