@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
-import './styles/index.css';
+// import './styles/index.css';
 
 import ConsumerAccountConfirmation from './templates/ConsumerAccountConfirmation';
 
