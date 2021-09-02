@@ -1,1 +1,1 @@
-export {generateEmailTpl} from './generator'
+export {generateEmailTpl, EmailType} from './generator'
