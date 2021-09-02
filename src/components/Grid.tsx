@@ -27,15 +27,12 @@ const Grid = ({children, style = {}}: IComponentsProps) => (
     {React.Children.map(children, (el: any) => {
       if (!el) return;
 
-      // We want this content the be on it's own row.
       if (el.type === Row) return el;
 
-      // The content is all inside a single cell (so a row)
       if (el.type === Cell) {
         return <tr>{el}</tr>;
       }
 
-      // The content is one cell inside it's own row
       return (
         <tr>
           <td>{el}</td>
