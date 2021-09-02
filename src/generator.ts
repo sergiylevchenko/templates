@@ -76,8 +76,6 @@ const getTemplate = (type: EmailType): ITemplateParams => {
 };
 
 const getFile = (relativePath): Promise<string> => {
-  console.log(__dirname)
-  console.log(path)
   return new Promise((resolve, reject) => {
     const filePath = path.join(__dirname, relativePath);
 
@@ -100,10 +98,10 @@ export const generateEmailTpl = async (type: EmailType, props: any): Promise<str
       const emailElement = React.createElement(tpl, {...props, subject});
       const content = ReactDOMServer.renderToStaticMarkup(emailElement);
 
-      // Replace the template tags with the content
-      let emailHTML = template;
-      emailHTML = emailHTML.replace(CONTENT_TAG, content);
+      // Replace the template tag with the content
+      let emailHtml = template;
+      emailHtml = emailHtml.replace(CONTENT_TAG, content);
 
-      return emailHTML;
+      return emailHtml;
     });
 };
